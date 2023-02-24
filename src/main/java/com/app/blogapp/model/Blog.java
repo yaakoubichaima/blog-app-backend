@@ -1,5 +1,11 @@
 package com.app.blogapp.model;
 
+import com.app.blogapp.ObjectIdDeserializer;
+import com.app.blogapp.ObjectIdSerializer;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -9,28 +15,35 @@ import org.springframework.data.mongodb.core.mapping.Field;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 public class Blog {
 
+    @JsonProperty("_id")
+    @JsonSerialize(using = ObjectIdSerializer.class)
     @Id
-    private int id;
+    private ObjectId _id;
 
     private String blogTitle;
 
     private String blogAuthor;
 
     private String blogContent;
+    private int upVotes;
+    private int downVotes;
 
-    public Blog(int id, String blogTitle, String blogAuthor, String blogContent) {
-        this.id = id;
+    public Blog(ObjectId _id, String blogTitle, String blogAuthor, String blogContent, int upVotes, int downVotes) {
+        this._id = _id;
         this.blogTitle = blogTitle;
         this.blogAuthor = blogAuthor;
         this.blogContent = blogContent;
+        this.upVotes = upVotes;
+        this.downVotes = downVotes;
     }
 
-    public int getId() {
-        return id;
+
+    public ObjectId get_id() {
+        return _id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void set_id(ObjectId _id) {
+        this._id = _id;
     }
 
     public String getBlogTitle() {
@@ -57,13 +70,31 @@ public class Blog {
         this.blogContent = blogContent;
     }
 
+    public int getUpVotes() {
+        return upVotes;
+    }
+
+    public void setUpVotes(int upVotes) {
+        this.upVotes = upVotes;
+    }
+
+    public int getDownVotes() {
+        return downVotes;
+    }
+
+    public void setDownVotes(int downVotes) {
+        this.downVotes = downVotes;
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
-                "id=" + id +
+                "_id=" + _id +
                 ", blogTitle='" + blogTitle + '\'' +
                 ", blogAuthor='" + blogAuthor + '\'' +
                 ", blogContent='" + blogContent + '\'' +
+                ", upVotes=" + upVotes +
+                ", downVotes=" + downVotes +
                 '}';
     }
 }

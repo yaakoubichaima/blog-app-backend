@@ -1,15 +1,16 @@
 package com.app.blogapp.repository;
 
 import com.app.blogapp.model.Blog;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 //@Repository
-public interface BlogRepository extends MongoRepository<Blog, Integer> {
+public interface BlogRepository extends MongoRepository<Blog, ObjectId> {
 
-    Blog findBlogById(int id);
+    Blog findBlogBy_id(ObjectId _id);
 
     //Blog updateBlog(int id, Blog blog);
 
-    void deleteBlogById(int id);
+    void deleteBlogBy_id(ObjectId _id);
 }
