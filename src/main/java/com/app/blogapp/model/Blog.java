@@ -28,13 +28,16 @@ public class Blog {
     private int upVotes;
     private int downVotes;
 
-    public Blog(ObjectId _id, String blogTitle, String blogAuthor, String blogContent, int upVotes, int downVotes) {
+    private String imgUrl;
+
+    public Blog(ObjectId _id, String blogTitle, String blogAuthor, String blogContent, int upVotes, int downVotes, String imgUrl) {
         this._id = _id;
         this.blogTitle = blogTitle;
         this.blogAuthor = blogAuthor;
         this.blogContent = blogContent;
         this.upVotes = upVotes;
         this.downVotes = downVotes;
+        this.imgUrl= imgUrl;
     }
 
 
@@ -86,15 +89,11 @@ public class Blog {
         this.downVotes = downVotes;
     }
 
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "_id=" + _id +
-                ", blogTitle='" + blogTitle + '\'' +
-                ", blogAuthor='" + blogAuthor + '\'' +
-                ", blogContent='" + blogContent + '\'' +
-                ", upVotes=" + upVotes +
-                ", downVotes=" + downVotes +
-                '}';
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }
