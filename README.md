@@ -1,6 +1,15 @@
-# Blog Backend using Spring Boot 3.0, Maven, and Java 19
+# Blog Backend 
+### using Spring Boot 3.0, Maven, and Java 19
 
 This repository contains a blog backend implemented using Spring Boot 3.0, Maven, and Java 19. The blog backend provides REST APIs to create, read, update, and delete blog posts.
+
+ ## Dependencies
+- **Spring WEB ** 
+is used for building web applications using Spring MVC.  
+
+- **Spring Data Mongodb ** 
+is used to connect to MongoDB and perform CRUD operations. 
+
 
 ## Installation
 
@@ -25,3 +34,4 @@ The blog backend provides the following REST APIs:
 |  DELETE | /blogs/{id}  | Delete a blog by ID |
 
 The request and response body for the REST APIs are in JSON format.
+
