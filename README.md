@@ -1,14 +1,12 @@
 # Blog Backend 
-### using Spring Boot 3.0, Maven, and Java 19
+### used Spring Boot 3.0, Maven, and Java 19
 
 This repository contains a blog backend implemented using Spring Boot 3.0, Maven, and Java 19. The blog backend provides REST APIs to create, read, update, and delete blog posts.
 
  ## Dependencies
-- **Spring WEB ** 
-is used for building web applications using Spring MVC.  
+- Spring WEB is used for building web applications using Spring MVC.  
 
-- **Spring Data Mongodb ** 
-is used to connect to MongoDB and perform CRUD operations. 
+- Spring Data Mongodb is used to connect to MongoDB and perform CRUD operations. 
 
 
 ## Installation
