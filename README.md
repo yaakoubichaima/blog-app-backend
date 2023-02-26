@@ -4,9 +4,9 @@ This repository contains a blog backend implemented using Spring Boot 3.0, Maven
 
 ## Installation
 
-1/ Clone the repository: `git clone https://github.com/your-username/blog-backend.git`
+1/ Clone the repository: `git clone https://github.com/yaakoubichaima/blog-app-backend.git`
 
-2/ Navigate to the project directory: `cd blog-backend`
+2/ Navigate to the project directory: `cd blog-app-backend`
 
 3/ Install the required dependencies: `mvn clean install`
 
