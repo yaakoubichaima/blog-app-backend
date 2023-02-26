@@ -3,6 +3,8 @@
 
 This repository contains a blog backend implemented using Spring Boot 3.0, Maven, and Java 19. The blog backend provides REST APIs to create, read, update, and delete blog posts.
 
+The project was generated using Spring Initializr.
+
  ## Dependencies
 - Spring WEB is used for building web applications using Spring MVC.  
 
