@@ -1,14 +1,11 @@
 package com.app.blogapp.model;
 
-import com.app.blogapp.ObjectIdDeserializer;
 import com.app.blogapp.ObjectIdSerializer;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 
 @Document(collection = "Blog")

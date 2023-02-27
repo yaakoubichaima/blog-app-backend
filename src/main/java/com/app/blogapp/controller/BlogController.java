@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@CrossOrigin(origins = "http:/ localhost:8081")
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/blogs")
 public class BlogController {
